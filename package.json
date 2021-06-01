@@ -19,6 +19,11 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
+    "chart.js": "^3.2.1",
+    "ng2-charts": "^2.4.2",
+    "ng2-google-charts": "^6.1.0",
+    "ng2-simple-smooth-scroll": "^1.2.0",
+    "ngx-spinner": "^11.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

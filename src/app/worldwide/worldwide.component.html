@@ -1,0 +1,81 @@
+<div class="container">
+  <h1 class="text-center mt-4">
+    Coronavirus <span class="text-success">live</span> updates <span> <img src="../assets/images/24475-coronavirus-infection.gif" height="150px"
+        width="180px">
+    </span> </h1>
+  <br>
+
+  <app-about></app-about>
+
+
+  <!-- cases info -->
+  <div class="row " id="about">
+    <div class="col">
+      <img src="../assets/images/ezgif.com-gif-maker.gif">
+
+    </div>
+    <div class="col mt-5 p-5 text-center">
+      <p>We are here to provide list of cases in Worldwide recently updated Data along with Date,
+        listed below .
+
+      </p>
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- <h3 class="text-center mt-5 p-5">List Of Cases </h3> -->
+
+    <div class="table-responsive jumbotron">
+      <table class="table table-hover  table-borderless">
+
+        <caption>Date :{{data.Global.Date}}</caption>
+        <!-- <thead class="text-center"> </thead>
+   -->
+        <tr>
+          <th>New Confirmed count</th>
+          <th>TotalConfirmed count</th>
+          <th>NewDeaths count</th>
+          <th>TotalDeaths count</th>
+          <th>NewRecovered count</th>
+          <th>TotalRecovered count</th>
+        </tr>
+        <tr class=" ">
+          <td>{{data.Global.NewConfirmed}}</td>
+          <td>{{data.Global.TotalConfirmed}}</td>
+          <td>{{data.Global.NewDeaths}}</td>
+          <td>{{data.Global.TotalDeaths}}</td>
+          <td>{{data.Global.NewRecovered}}</td>
+          <td>{{data.Global.TotalRecovered}}</td>
+
+
+        </tr>
+      </table>
+    </div>
+
+    <!-- Coronavirus symptoms -->
+
+
+    <app-symptoms></app-symptoms>
+  
+
+
+    <!-- 6 Steps Prevention Against Coronavirus -->
+
+    <app-prevention></app-prevention>
+
+
+  </div>
+     
+
+  
+
+  
+
+  
+
+
+
+
+

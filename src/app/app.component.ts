@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { SimpleSmoothScrollService } from 'ng2-simple-smooth-scroll';
+import { SimpleSmoothScrollOption } from 'ng2-simple-smooth-scroll';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Covid19';
+
+
+
+ 
+  constructor(private smooth: SimpleSmoothScrollService) {}
+
+  ngOnInit() {
+    this.smooth.smoothScrollToAnchor();
+   
+   
+    
+         
+    }
+    goTop(){
+      this.smooth.smoothScrollToTop({ duration: 1000, easing: 'linear' });
+    }
+ 
+
 }

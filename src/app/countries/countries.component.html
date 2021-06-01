@@ -1,0 +1,87 @@
+<div class="container">
+
+  <h1 class="display-4 text-center">Covid 19 Tracker Country wise</h1>
+  <hr>
+
+  <h4>Please Select Specific Country To see list of cases</h4>
+
+  
+  <div class="mx-auto">
+    <div class="form-group col-lg-5 mx-auto">
+      <label for="countries">Countries</label>
+      <select class="form-control" #sele (change)="saverange(sele.value)">
+        <option [ngValue]="item" *ngFor="let item of list">{{item.Country}}</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="jumbotron">
+    <!-- {{totalCount | json}}
+    {{totalCount.Confirmed ? totalCount.Confirmed : 'N/A'}}  -->
+    <!-- {{listofone | json}} -->
+    <div class="row">
+      <!-- first column -->
+      <div class="col card p-2 m-2">
+        <h3>Confirmed</h3>
+        <div>
+          {{totalCount.Confirmed ? totalCount.Confirmed : 'No Data Available'}}
+        </div>
+      </div>
+      <!-- second column -->
+      <div class="col card p-2 m-2">
+        <h3>Deaths</h3>
+        <div>
+          {{totalCount.Deaths ? totalCount.Deaths: 'No Data Available'}}
+        </div>
+      </div>
+      <!-- third colummn -->
+      <div class="col card p-2 m-2">
+        <h3>Recovered</h3>
+        <div>
+          {{totalCount.Recovered ? totalCount.Recovered : 'No Data Available'}}
+        </div>
+      </div>
+      <!-- fourth column -->
+      <div class="col card p-2 m-2">
+        <h3>Active</h3>
+        <div>
+          {{totalCount.Active ? totalCount.Active : 'No Data Available'}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- <table class="table">
+        <thead>
+          <tr>
+             <th>Date</th> 
+            <th>Confirmed</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+            <th>Active</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+              <td>{{field.Date | date:'short' }}</td>
+            <td>{{field.Confirmed}}</td>
+            <td>{{field.Deaths}}</td>
+            <td>{{field.Recovered}}</td>
+            <td>{{field.Active}}</td>
+
+          </tr>
+        </tbody>
+      </table> -->
+</div>   
+
+
+  <div *ngIf ="isShow" class="col">
+    <google-chart [data]="pieChart"></google-chart>
+  </div>
+
+  <!-- <a href="path/to/file.ext" download rel="noopener noreferrer" target="_blank">
+    Download File
+ </a> -->
